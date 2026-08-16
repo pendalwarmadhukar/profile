@@ -11,14 +11,9 @@ import {
   Eye,
   CheckCircle,
   ShieldAlert,
-  Layers,
-  Award,
-  X,
-  CheckCircle2,
-  Calendar
+  Layers
 } from "lucide-react";
 import { getPortfolioData } from "../utils/portfolioData";
-import type { Certificate } from "../utils/portfolioData";
 import CyberCore3D from "../components/3d/CyberCore3D";
 
 // Custom SVG Brand Icons
@@ -37,8 +32,7 @@ const LinkedinIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 export default function Home() {
-  const { projects, certifications } = getPortfolioData();
-  const [selectedHomeCert, setSelectedHomeCert] = useState<Certificate | null>(null);
+  const { projects } = getPortfolioData();
   const bankguard = projects.find((p) => p.slug === "bankguard-nexus") || projects[0];
   const cloudshield = projects.find((p) => p.slug === "cloudshield") || projects[1];
   const sentinel = projects.find((p) => p.slug === "sentinel-ai") || projects[2];
