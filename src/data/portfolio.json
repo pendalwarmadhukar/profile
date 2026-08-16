@@ -1,0 +1,254 @@
+{
+  "projects": [
+    {
+      "title": "BankGuard Nexus",
+      "slug": "bankguard-nexus",
+      "category": "AI + Cybersecurity",
+      "type": "Featured Cyber Build",
+      "year": "2026",
+      "role": "Lead Architect",
+      "institution": "Self-Directed Study",
+      "guide": "AI Security Framework",
+      "description": "An AI-powered banking fraud detection and security system designed to identify phishing messages, malicious links, suspicious OTP activity, and scam-call threats.",
+      "problem": "Phishing scams, fake URLs, and social engineering OTP hijacks bypass traditional rule-based defenses and lead to immediate financial drain.",
+      "solution": "Built a centralized security decision engine parsing message bodies, checking URLs against dynamic blocklists, and computing threat scoring in real time using local ML classification.",
+      "impact": "Mitigates zero-day phishing links and automated text scams prior to transaction processing gateways.",
+      "technologies": ["AI", "Python", "Cybersecurity", "Machine Learning", "FastAPI", "TensorFlow"],
+      "architecture": {
+        "steps": [
+          "Incoming message payload parser",
+          "AI Threat Detection analysis",
+          "URL blocklist & domain reputation check",
+          "Threat Score Calculation (82%)",
+          "Centralized security decision engine triggers BLOCK + ALERT"
+        ]
+      },
+      "results": "Correctly detected 97% of mock banking phishing payloads and flagged malicious URL redirects in less than 350ms.",
+      "futureScope": "Deploy localized LLMs to model context of incoming phone scam transcripts in real time.",
+      "github": "https://github.com/pendalwarmadhukar/bankguard-nexus",
+      "liveDemo": "https://bank-sentinel-ai.lovable.app",
+      "documentation": "",
+      "images": [],
+      "videos": [],
+      "featured": true,
+      "securityAspects": "AI threat detection, SMS analysis, OTP security, malicious URL detection, threat scoring, centralized decision engine"
+    },
+    {
+      "title": "CloudShield",
+      "slug": "cloudshield",
+      "category": "Cloud Security",
+      "type": "Featured Cloud Project",
+      "year": "2026",
+      "role": "Cloud Security Architect",
+      "institution": "Siddhartha Institute of Technology & Sciences",
+      "guide": "AWS Security Framework",
+      "description": "Secure cloud file storage architecture using AWS security services and encrypted access controls.",
+      "problem": "Uncontrolled public access, lack of server-side encryption, and static long-term access credentials expose cloud-hosted file repositories to leaks and access violations.",
+      "solution": "Designed a secure cloud storage pattern using AWS S3 bucket policies to block public access, AWS KMS for customer-managed encryption keys, and IAM roles to restrict write access. Temporary access is generated via secure short-lived S3 Pre-signed URLs.",
+      "impact": "Demonstrates practical execution of the Principle of Least Privilege (PoLP) and secure key rotation strategies in cloud infrastructure.",
+      "technologies": ["AWS S3", "AWS IAM", "AWS KMS", "AWS CloudTrail", "Node.js", "MongoDB", "Express", "Vite", "TypeScript"],
+      "architecture": {
+        "steps": [
+          "User requests download link (React Client)",
+          "Authentication validation (JWT & IAM checks)",
+          "Generate pre-signed S3 download URL (Express Backend)",
+          "Retrieve object with AES-256 decrypted keys (AWS S3 & KMS)",
+          "Audit event logged (AWS CloudTrail & CloudWatch)"
+        ]
+      },
+      "results": "Configured 100% encryption-at-rest with automatic S3 block-public-access controls and short-term IAM access role isolation.",
+      "futureScope": "Integrate automated malware scanning on file uploads using an AWS Lambda function integrated with ClamAV.",
+      "github": "https://github.com/pendalwarmadhukar/cloudshield",
+      "liveDemo": "",
+      "documentation": "https://github.com/pendalwarmadhukar/cloudshield#readme",
+      "images": [],
+      "videos": [],
+      "featured": true,
+      "securityAspects": "IAM least privilege, KMS key rotation, encryption-at-rest/in-transit, pre-signed URLs, CloudTrail audit logs"
+    },
+    {
+      "title": "Sentinel AI",
+      "slug": "sentinel-ai",
+      "category": "AI Cybersecurity",
+      "type": "Futuristic Concept Build",
+      "year": "2026",
+      "role": "AI Security Analyst",
+      "institution": "Academic Lab Experiments",
+      "guide": "Cognitive Threat Modeling",
+      "description": "A futuristic AI security assistant designed for threat analysis, security alerts, suspicious activity monitoring, and security recommendations.",
+      "problem": "Security analysts are overwhelmed by massive logs streams, leading to delayed detections and unmonitored lateral movements.",
+      "solution": "Engineered a local interface integrating lightweight parser scripts and token analyzers to scan input logs and output prioritized severity alerts.",
+      "impact": "Reduces investigation times by pre-categorizing logs and presenting proactive system hardening steps.",
+      "technologies": ["AI", "Python", "FastAPI", "React", "Machine Learning", "Regular Expressions"],
+      "architecture": {
+        "steps": [
+          "System log parser checks active endpoints",
+          "AI anomaly scanner spots lateral movements",
+          "Generates prioritized security recommendations",
+          "Alerts sent via secure communication socket connection"
+        ]
+      },
+      "results": "Tested log parsing templates on mock system access trails, locating 95% of simulated malicious connections.",
+      "futureScope": "Integrate with eBPF hooks for direct kernel-level threat isolation.",
+      "github": "https://github.com/pendalwarmadhukar/sentinel-ai",
+      "liveDemo": "",
+      "documentation": "",
+      "images": [],
+      "featured": true,
+      "securityAspects": "Threat analysis, security alerts, suspicious activity monitoring, security recommendations, AI-assisted investigation"
+    },
+    {
+      "title": "Secure Task Manager",
+      "slug": "secure-task-manager",
+      "category": "Web Security",
+      "type": "Academic Project",
+      "year": "2025",
+      "role": "Lead Developer",
+      "institution": "Siddhartha Institute of Technology & Sciences",
+      "guide": "Web Application Security Notes",
+      "description": "A collaborative task management application featuring hardened backend logic, role-based access control, and protection against common OWASP Top 10 vulnerabilities.",
+      "problem": "Typical productivity tools focus on usability and lack data security, exposing tasks and credentials to unauthorized modification, SQL injections, and session hijackings.",
+      "solution": "Built a multi-user dashboard utilizing secure JWT storage, password hashing via bcrypt, sanitized request routing to block scripting injections, and express rate-limiting to mitigate brute-force attempts.",
+      "impact": "Successfully established a secure coding workflow applying defensive controls directly during application bootstrap.",
+      "technologies": ["React", "Node.js", "Express", "MongoDB", "JWT", "BCrypt", "OWASP Security Guidelines"],
+      "architecture": {
+        "steps": [
+          "Client UI (React/Vite): Input validation",
+          "API Gateway: Sanitization parameters parsing",
+          "Auth Gate: Validates JWT access parameters",
+          "DB Layer (MongoDB): Stores hashed credentials and encrypted tokens"
+        ]
+      },
+      "results": "Maintained secure operations across simulated brute-force logins and input injection tests. Mitigated 100% of standard script insertion payloads.",
+      "futureScope": "Incorporate OAuth2.0 authentication flows and biometric MFA protocols.",
+      "github": "https://github.com/pendalwarmadhukar/secure-task-manager",
+      "liveDemo": "",
+      "documentation": "",
+      "images": [],
+      "featured": true,
+      "securityAspects": "JWT authorization, bcrypt password hashing, request sanitization, Express rate-limiter, OWASP security practices"
+    }
+  ],
+  "publications": [
+    {
+      "title": "Client-Side Permissions Auditing and Browser API Sanitization Methods",
+      "authors": "Madhukar Pendalwar, et al.",
+      "venue": "Academic CSE Department Research Notes",
+      "year": "2026",
+      "status": "In Preparation / Draft",
+      "doi": "",
+      "ieeeUrl": "",
+      "pdf": "",
+      "abstract": "Investigating how peripheral APIs (webcam, geolocation) cache user permissions, identifying browser hijack vectors, and presenting client-side Content Security Policy (CSP) configurations to protect hardware indicators.",
+      "keywords": "Browser Security, Web API, Permission Policies, XSS Mitigation, Sandbox Escapes"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "The Cold Start - CTF",
+      "organization": "TryHackMe",
+      "domain": "Offensive Security & CTF",
+      "project": "Solved real-world offensive security challenges with 2,160 points earned",
+      "type": "CTF Completion Certificate",
+      "issueDate": "2026",
+      "image": "/certificates/tryhackme_cold_start_ctf.png",
+      "verificationUrl": ""
+    },
+    {
+      "title": "Love at First Breach - CTF",
+      "organization": "TryHackMe",
+      "domain": "Ethical Hacking",
+      "project": "600 Points earned // Scoreboard Rank #228 // Team cybers square",
+      "type": "CTF Certificate of Completion",
+      "issueDate": "Feb 24, 2026",
+      "image": "/certificates/tryhackme_love_at_first_breach_ctf.png",
+      "verificationUrl": ""
+    },
+    {
+      "title": "Cybersecurity Fundamentals",
+      "organization": "IBM SkillsBuild",
+      "domain": "Cybersecurity Fundamentals",
+      "project": "Demonstrated professional commitment and core cybersecurity principles map",
+      "type": "Verified Professional Credential",
+      "issueDate": "Feb 12, 2026",
+      "image": "/certificates/ibm_cybersecurity_fundamentals.png",
+      "verificationUrl": "https://www.credly.com/badges/3b52f7a7-f5e1-4a74-b266-9d5169190310"
+    },
+    {
+      "title": "Advent of Cyber 2025",
+      "organization": "TryHackMe",
+      "domain": "Ethical Hacking",
+      "project": "Completed 24 hands-on cyber security labs & defense challenges",
+      "type": "Certificate of Completion",
+      "issueDate": "Jan 25, 2026",
+      "image": "/certificates/tryhackme_advent_of_cyber_2025.png",
+      "verificationUrl": "THM-CFDBNGQB34"
+    },
+    {
+      "title": "Hacker Holidays - Byte Lotus",
+      "organization": "TryHackMe",
+      "domain": "Network & Web Security",
+      "project": "Completed Byte Lotus security room challenge",
+      "type": "Certificate of Participation",
+      "issueDate": "Aug 15, 2026",
+      "image": "/certificates/tryhackme_hacker_holidays.png",
+      "verificationUrl": "THM-DZ1VCVSWXX"
+    },
+    {
+      "title": "TCS iON Career Edge - Young Professional",
+      "organization": "TCS iON (Tata Consultancy Services)",
+      "domain": "Professional & IT Skills",
+      "project": "Completed corporate communication, IT fundamentals, AI overview & soft skills training",
+      "type": "Certificate of Achievement",
+      "issueDate": "Jul 22, 2025",
+      "image": "/certificates/tcs_ion_career_edge.png",
+      "verificationUrl": "240640-28576843-1016"
+    }
+  ],
+  "ideas": [
+    {
+      "title": "AI-Powered Real-Time Threat Audit Node",
+      "problem": "Small scale developers lack tools to parse web server log files in real-time, leaving them open to SQL injections or slow-rate scraping.",
+      "concept": "A lightweight background audit daemon that streams Apache/Nginx logs, checks against signature databases, and forwards hooks to Discord/Slack channels.",
+      "technology": "Python, FastAPI, Logstash, Webhooks",
+      "impact": "Democratizes server logs monitoring for students and independent builders.",
+      "status": "IDEA"
+    },
+    {
+      "title": "Zero-Knowledge Academic Certificate Verifier",
+      "problem": "Manual verification of academic certificates is slow and prone to forgery.",
+      "concept": "A student repository that hosts cryptographically signed hashes of academic transcripts, allowing instantaneous checking without revealing private student logs.",
+      "technology": "React, TypeScript, ZK-Snarks, Node.js",
+      "status": "RESEARCH",
+      "impact": "Strengthens student project validation while maintaining user privacy."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Web Development Intern",
+      "organization": "Cognifyz Technologies",
+      "role": "Frontend Developer Intern",
+      "period": "11/2025 - 12/2025",
+      "description": "Implemented web interface prototypes using clean frontend logic and conducted basic security code reviews.",
+      "highlights": [
+        "Built responsive client interface elements using React and Tailwind CSS",
+        "Applied best practices in parameters validation for API inputs",
+        "Engaged in standard cross-origin security resource sharing configurations"
+      ],
+      "technologies": ["React", "JavaScript", "Tailwind CSS", "HTML5", "CSS3"]
+    },
+    {
+      "title": "Full Stack Developer Intern",
+      "organization": "Dexmiq Solutions",
+      "role": "Full Stack Intern",
+      "period": "09/2025 - 10/2025",
+      "description": "Collaborated on designing database schemas and security parameters for API routes.",
+      "highlights": [
+        "Engineered REST endpoints utilizing Node.js and Express backend structures",
+        "Designed and audited MongoDB queries to prevent parameter injection risks",
+        "Configured secure user authentication gates using JSON Web Tokens (JWT)"
+      ],
+      "technologies": ["Node.js", "Express.js", "MongoDB", "React", "JWT"]
+    }
+  ]
+}
